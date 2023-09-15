@@ -121,7 +121,7 @@ const checkMap = (arr) => {
 
 const stop = (arr) => {
     modal.style.visibility = 'visible';
-    modalWindow.innerHTML = `${arr == first ? 'первый' : 'второй'}`;
+    modalWindow.innerHTML = `${arr == first ? 'Победил первый игрок!' : 'Победил второй игрок!'}`;
     first = [];
     second = [];
     items.forEach(item => item.classList.remove('active', 'active_o', 'active_x'));
@@ -153,10 +153,14 @@ document.addEventListener('click', closeModal);
 resetBtn.addEventListener('click', reset);
 playerBtn.addEventListener('click', () => {
     mode = true;
+    playerBtn.classList.add('active-mode');
+    botBtn.classList.remove('active-mode');
 })
 
 botBtn.addEventListener('click', () => {
     mode = false;
+    playerBtn.classList.remove('active-mode');
+    botBtn.classList.add('active-mode');
 })
 
 
