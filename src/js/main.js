@@ -1,5 +1,5 @@
 import '../index.html';
-import '../assets/style.scss';
+import '../assets/style.css';
 
 const field = document.querySelector('.field');
 const items = document.querySelectorAll('.cell');
